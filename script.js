@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Mobile Menu Auto Close ---
+    const navbarCollapse = document.getElementById('navbarNav');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+                // Using Bootstrap's JS API to close the menu
+                if (typeof bootstrap !== 'undefined') {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, {toggle: false});
+                    bsCollapse.hide();
+                } else {
+                    navbarCollapse.classList.remove('show');
+                }
+            }
+        });
+    });
+
     // --- Theme Toggle ---
     const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.body;

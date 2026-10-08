@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlowCircle - Share. Discover. Glow Together.</title>
     <meta name="description" content="Connect with beauty lovers, skincare enthusiasts and trusted experts to share experiences and make smarter personal-care choices.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -18,15 +20,15 @@
 </head>
 <body class="light-mode">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top glow-nav" id="mainNav">
+    <nav class="navbar navbar-expand-xl fixed-top glow-nav" id="mainNav">
         <div class="container">
             <a class="navbar-brand brand-logo" href="#">
                 <i class="bi bi-stars"></i> GlowCircle
             </a>
             
-            <div class="d-flex align-items-center d-lg-none gap-3">
+            <div class="d-flex align-items-center d-xl-none gap-3">
                 <button class="icon-btn theme-toggle"><i class="bi bi-moon"></i></button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="bi bi-list"></span>
                 </button>
             </div>
@@ -43,8 +45,8 @@
                     <li class="nav-item"><a class="nav-link" href="#feed">Feed</a></li>
                     <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
                 </ul>
-                <div class="nav-actions d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                    <button class="icon-btn theme-toggle d-none d-lg-flex"><i class="bi bi-moon"></i></button>
+                <div class="nav-actions d-flex align-items-center gap-3 mt-3 mt-xl-0">
+                    <button class="icon-btn theme-toggle d-none d-xl-flex"><i class="bi bi-moon"></i></button>
                     <button type="button" class="btn btn-primary join-btn rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#joinModal">Join Community</button>
                 </div>
             </div>
@@ -59,7 +61,7 @@
                     <span class="label-badge mb-3 d-inline-block">THE BEAUTY COMMUNITY</span>
                     <h1 class="hero-title display-3 fw-bold mb-4">Your Beauty Questions<br>Deserve Better Answers.</h1>
                     <p class="hero-desc lead mb-5">Connect with beauty lovers, skincare enthusiasts and trusted experts to share experiences, discover routines and make smarter personal-care choices.</p>
-                    <div class="hero-cta d-flex gap-3 mb-5">
+                    <div class="hero-cta d-flex flex-column flex-md-row gap-3 mb-5">
                         <button type="button" class="btn btn-primary rounded-pill px-5 py-3" data-bs-toggle="modal" data-bs-target="#joinModal">Join the Community</button>
                         <a href="#discussions" class="btn btn-outline-primary rounded-pill px-5 py-3">Explore Discussions</a>
                     </div>
@@ -555,7 +557,7 @@
         <div class="container py-5 position-relative z-1">
             <h2 class="display-4 fw-bold mb-4">Your Routine. Your Questions.<br>Your Community.</h2>
             <p class="lead mb-5 mx-auto" style="max-width: 600px;">Join thousands of beauty lovers sharing real experiences, asking better questions and learning from trusted experts.</p>
-            <div class="d-flex justify-content-center gap-3">
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
                 <button type="button" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg cta-magnetic" data-bs-toggle="modal" data-bs-target="#joinModal">Join GlowCircle</button>
                 <a href="#discussions" class="btn btn-outline-primary btn-lg rounded-pill px-5 cta-magnetic">Explore Discussions</a>
             </div>

@@ -42,12 +42,16 @@
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-logo {
@@ -119,6 +123,19 @@ a:hover {
     padding: 0.8rem 0 !important;
     box-shadow: var(--shadow-sm) !important;
     border-bottom: 1px solid var(--border-color) !important;
+}
+
+@media (max-width: 1199.98px) {
+    .navbar-collapse {
+        background: var(--bg-glass-heavy);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border-color);
+    }
 }
 
 .brand-logo {
