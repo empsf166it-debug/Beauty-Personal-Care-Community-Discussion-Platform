@@ -145,10 +145,15 @@ a:hover {
 }
 
 .nav-links .nav-link {
-    color: var(--text-main);
+    color: var(--text-main) !important;
     font-weight: 500;
     margin: 0 0.5rem;
     position: relative;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+    color: var(--text-main) !important;
 }
 
 .nav-links .nav-link::after {
@@ -322,23 +327,40 @@ a:hover {
 .avatar-xs { width: 24px; height: 24px; object-fit: cover; }
 .avatar-xl { width: 120px; height: 120px; object-fit: cover; }
 
+.avatar-group > * {
+    margin-left: -12px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+.avatar-group > *:first-child {
+    margin-left: 0;
+}
+.avatar-group > *:hover {
+    transform: translateY(-3px);
+    z-index: 10 !important;
+}
+
 /* ==== TRENDING DISCUSSIONS ==== */
 .asym-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
-    grid-auto-flow: dense;
+}
+
+.discussion-card {
+    flex: 1 1 300px;
+    max-width: 450px;
 }
 
 .featured {
-    grid-column: span 2;
-    grid-row: span 2;
+    flex: 1 1 100%;
+    max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1025px) {
     .featured {
-        grid-column: span 1;
-        grid-row: span 1;
+        flex: 2 1 600px;
     }
 }
 
@@ -385,9 +407,19 @@ a:hover {
     z-index: -1;
 }
 
+.ask-form-wrapper textarea.form-control {
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+.ask-form-wrapper textarea.form-control::placeholder {
+    color: var(--text-muted);
+}
+
 .ask-form-wrapper textarea:focus {
     box-shadow: none;
     border-color: var(--primary-color);
+    color: var(--text-main);
 }
 
 .category-tags .btn-check:checked + .btn {
@@ -671,6 +703,17 @@ a:hover {
 .footer-links a:hover {
     color: var(--primary-color);
     padding-left: 5px;
+}
+
+.social-links .icon-btn {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-links .icon-btn:hover {
+    background: var(--primary-color);
+    color: #fff !important;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(181, 101, 118, 0.4);
 }
 
 /* ==== ANIMATIONS ==== */
